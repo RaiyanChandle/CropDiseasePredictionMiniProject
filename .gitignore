@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+Thumbs.db
+db.json
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+
+# Project specific
+temp.jpg
+node_modules/
+.env
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+.ipynb_checkpoints/
