@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import About from './pages/About';
+import Blog from './pages/Blog';
 import FarmerDashboard from './pages/FarmerDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminMap from './pages/AdminMap';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="blog" element={<Blog />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             
