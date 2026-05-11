@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 const Home = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 text-center">
       <h1 className="text-5xl font-extrabold text-green-700 mb-6 tracking-tight">
@@ -12,18 +15,29 @@ const Home = () => {
       </p>
       
       <div className="flex space-x-4">
-        <Link 
-          to="/signup" 
-          className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition shadow-lg"
-        >
-          Get Started
-        </Link>
-        <Link 
-          to="/login" 
-          className="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-lg font-semibold hover:bg-green-50 transition shadow-lg"
-        >
-          Login
-        </Link>
+        {user ? (
+          <Link 
+            to={user.role === 'admin' ? '/admin-dashboard' : '/farmer-dashboard'} 
+            className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition shadow-lg"
+          >
+            Go to Dashboard
+          </Link>
+        ) : (
+          <>
+            <Link 
+              to="/signup" 
+              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition shadow-lg"
+            >
+              Get Started
+            </Link>
+            <Link 
+              to="/login" 
+              className="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-lg font-semibold hover:bg-green-50 transition shadow-lg"
+            >
+              Login
+            </Link>
+          </>
+        )}
       </div>
       
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
