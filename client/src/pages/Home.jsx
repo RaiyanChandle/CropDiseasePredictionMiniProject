@@ -1,15 +1,20 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+import BlurText from '../components/ui/BlurText';
 
 const Home = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 text-center">
-      <h1 className="text-5xl font-extrabold text-green-700 mb-6 tracking-tight">
-        Crop Disease Predictor
-      </h1>
+      <BlurText
+        text="Crop Disease Predictor"
+        delay={100}
+        animateBy="words"
+        direction="top"
+        className="text-5xl font-extrabold text-green-700 mb-6 tracking-tight justify-center"
+      />
       <p className="text-xl text-gray-600 mb-8 max-w-2xl">
         Empowering farmers with AI-driven insights. Upload an image of your crop leaves, and instantly identify potential diseases to protect your harvest.
       </p>
