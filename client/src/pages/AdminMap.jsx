@@ -51,12 +51,12 @@ const AdminMap = () => {
     }
   };
 
-  if (loading) return <div className="text-center mt-20 text-gray-600 dark:text-gray-300">Loading map data...</div>;
+  if (loading) return <div className="text-center mt-20 text-gray-600">Loading map data...</div>;
 
   return (
     <div className="max-w-7xl mx-auto mt-6 p-4">
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-6">Disease Spread Map</h1>
-      <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 h-[70vh]">
+      <h1 className="text-3xl font-bold text-green-800 mb-6">Disease Spread Map</h1>
+      <div className="bg-white p-4 rounded-xl shadow-lg border border-green-100 h-[70vh]">
         <MapContainer 
           center={[20.5937, 78.9629]} // Default center (India roughly)
           zoom={5} 

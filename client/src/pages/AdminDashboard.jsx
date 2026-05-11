@@ -28,34 +28,34 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700">
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Admin Dashboard</h1>
-      <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">Welcome, {user?.name}. Monitor platform usage and regional disease trends.</p>
+    <div className="max-w-6xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-lg border border-green-100">
+      <h1 className="text-3xl font-bold text-green-800 mb-4">Admin Dashboard</h1>
+      <p className="text-lg text-gray-600 mb-8">Welcome, {user?.name}. Monitor platform usage and regional disease trends.</p>
       
       {loading ? (
         <p className="text-gray-500">Loading statistics...</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-purple-50 dark:bg-gray-700 rounded-lg border border-purple-100 dark:border-gray-600">
-            <h2 className="text-xl font-semibold text-purple-700 dark:text-purple-400 mb-2">Total Farmers</h2>
-            <p className="text-3xl font-bold text-gray-800 dark:text-white">{stats.totalFarmers}</p>
+          <div className="p-6 bg-purple-50 rounded-lg border border-purple-100">
+            <h2 className="text-xl font-semibold text-purple-700 mb-2">Total Farmers</h2>
+            <p className="text-3xl font-bold text-gray-800">{stats.totalFarmers}</p>
           </div>
           
-          <div className="p-6 bg-yellow-50 dark:bg-gray-700 rounded-lg border border-yellow-100 dark:border-gray-600">
-            <h2 className="text-xl font-semibold text-yellow-700 dark:text-yellow-400 mb-2">Total Scans</h2>
-            <p className="text-3xl font-bold text-gray-800 dark:text-white">{stats.totalScans}</p>
+          <div className="p-6 bg-yellow-50 rounded-lg border border-yellow-100">
+            <h2 className="text-xl font-semibold text-yellow-700 mb-2">Total Scans</h2>
+            <p className="text-3xl font-bold text-gray-800">{stats.totalScans}</p>
           </div>
           
-          <div className="p-6 bg-red-50 dark:bg-gray-700 rounded-lg border border-red-100 dark:border-gray-600">
-            <h2 className="text-xl font-semibold text-red-700 dark:text-red-400 mb-2">Top Disease</h2>
-            <p className="text-xl font-bold text-gray-800 dark:text-white">{stats.topDisease}</p>
+          <div className="p-6 bg-red-50 rounded-lg border border-red-100">
+            <h2 className="text-xl font-semibold text-red-700 mb-2">Top Disease</h2>
+            <p className="text-xl font-bold text-gray-800">{stats.topDisease}</p>
           </div>
         </div>
       )}
       
-      <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Data Reports & Insights</h2>
-        <p className="text-gray-500 dark:text-gray-400 mb-4">
+      <div className="mt-8 p-6 bg-green-50 rounded-lg border border-green-200">
+        <h2 className="text-xl font-semibold text-green-800 mb-4">Data Reports & Insights</h2>
+        <p className="text-gray-600 mb-4">
           All data is actively collected from the farmer mobile and web endpoints. 
           Use the <strong>Disease Map</strong> from the navigation bar to visually track geographic hotspots in real-time.
         </p>

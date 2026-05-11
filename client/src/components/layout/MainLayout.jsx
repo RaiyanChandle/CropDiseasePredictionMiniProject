@@ -11,9 +11,9 @@ const MainLayout = () => {
       <div className="flex flex-col min-h-screen text-gray-900 relative">
         <div className="fixed inset-0 z-[-1]">
           <Grainient
-            color1="#dcfce7"
-            color2="#86efac"
-            color3="#22c55e"
+            color1="#f0fdf4"
+            color2="#bbf7d0"
+            color3="#4ade80"
             timeSpeed={1.85}
             colorBalance={-0.02}
             warpStrength={0.8}
