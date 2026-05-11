@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-md">
+    <nav className="bg-white shadow-md border-b border-green-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
@@ -20,6 +20,7 @@ const Navbar = () => {
           </div>
           <div className="flex space-x-4 items-center">
             <Link to="/" className="text-gray-700 dark:text-gray-200 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+            <Link to="/about" className="text-gray-700 dark:text-gray-200 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">About</Link>
             {user?.role === 'admin' && (
               <Link to="/admin-map" className="text-gray-700 dark:text-gray-200 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Disease Map</Link>
             )}

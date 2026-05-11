@@ -5,6 +5,7 @@ import MainLayout from './components/layout/MainLayout';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import About from './pages/About';
 import FarmerDashboard from './pages/FarmerDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminMap from './pages/AdminMap';
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
             <Route path="login" element={<Login />} />
             <Route path="signup" element={<Signup />} />
             
